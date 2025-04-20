@@ -1,10 +1,13 @@
-﻿using NJsonSchema;
+﻿using System.Runtime.CompilerServices;
+using NJsonSchema;
 using NJsonSchema.CodeGeneration.CSharp;
 
 namespace ParseJSON
 {
     public static class Program
     {
+        // This is only ran once
+        [MethodImpl(MethodImplOptions.AggressiveOptimization)]
         private static async Task Main(string[] args)
         {
             Console.Write("Input the path to your JSON file:");
